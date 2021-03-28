@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="XamlBrewer.UWP.MvvmToolkitValidation.Sample.Views.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamlBrewer.UWP.MvvmToolkitValidation.Sample.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+      Background="Transparent">
+    <Grid Background="Transparent">
+        <!--<TextBlock>
+            <Run>This app demonstrates variations and alternatives for the WinUI 2.6 Pager control.</Run>
+            <LineBreak />
+            <LineBreak />
+            <Bold>Credits</Bold>
+            <LineBreak />
+            <Run Text="Background image designed by " /><Hyperlink NavigateUri="http://www.freepik.com">Freepik</Hyperlink><Run>.</Run>
+            <LineBreak />
+            <Run Text="Awesome Breaking Bad Simpsonizations by Belgian artist " /><Hyperlink NavigateUri="https://drawthesimpsons.tumblr.com/">Adrien Noterdaem</Hyperlink><Run>.</Run>
+        </TextBlock>-->
+    </Grid>
+</Page>
