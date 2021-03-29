@@ -235,7 +235,7 @@
                                          Opacity=".2" />
                     </Border.Background>
                     <TextBlock VerticalAlignment="Center"
-                               Padding="20 4">Try</TextBlock>
+                               Padding="20 4">There *is* a Try</TextBlock>
                 </Border>
                 <Grid VerticalAlignment="Top"
                       HorizontalAlignment="Stretch"
@@ -274,7 +274,8 @@
                                Grid.Row="1"
                                Grid.Column="1" />
                     <Grid Grid.Row="2"
-                          Grid.ColumnSpan="2">
+                          Grid.ColumnSpan="2"
+                          Margin="0 -6">
                         <TextBlock Text="Definitely not Yoda" />
                         <!-- HasErrors is always false -->
                         <SymbolIcon Symbol="ReportHacked"

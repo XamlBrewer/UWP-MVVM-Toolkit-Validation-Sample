@@ -1,27 +1,23 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Mvvm.Input;
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Windows.Input;
 
 namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
 {
-    // https://github.com/windows-toolkit/WindowsCommunityToolkit/blob/rel/7.0.0/UnitTests/UnitTests.Shared/Mvvm/Test_ObservableValidator.cs
-
-    public class SuspectWithDelayedValidation : ObservableValidator
+    public class Suspect : ObservableValidator
     {
         private string _name;
         private string _socialSecurityNumber;
 
-        public SuspectWithDelayedValidation()
+        public Suspect()
         {
             ErrorsChanged += Suspect_ErrorsChanged;
             PropertyChanged += Suspect_PropertyChanged;
         }
 
-        ~SuspectWithDelayedValidation()
+        ~Suspect()
         {
             ErrorsChanged -= Suspect_ErrorsChanged;
             PropertyChanged -= Suspect_PropertyChanged;
@@ -32,17 +28,15 @@ namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
         public string Name
         {
             get => _name;
-            set => SetProperty(ref _name, value, false);
+            set => SetProperty(ref _name, value, true);
         }
 
         [RegularExpression(@"^(?!000)(?!666)(?!9)\d{3}([- ]?)(?!00)\d{2}\1(?!0000)\d{4}$", ErrorMessage = "Invalid Social Security Number.")]
         public string SocialSecurityNumber
         {
-            get => _socialSecurityNumber; 
-            set => SetProperty(ref _socialSecurityNumber, value, false);
+            get => _socialSecurityNumber;
+            set => SetProperty(ref _socialSecurityNumber, value, true);
         }
-
-        public ICommand ValidateCommand => new RelayCommand(() => ValidateAllProperties());
 
         public string Errors => string.Join(Environment.NewLine, from ValidationResult e in GetErrors(null) select e.ErrorMessage);
 
