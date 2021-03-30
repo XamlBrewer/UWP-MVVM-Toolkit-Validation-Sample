@@ -1,5 +1,5 @@
 # UWP-MVVM-Toolkit-Validation-Sample
-Demonstrates different viewmodel validation strategies with Microsoft MVVM Toolkit from Windows Community Toolkit.
+Demonstrates different viewmodel validation strategies with Microsoft MVVM Toolkit from Windows Community Toolkit in a UWP app.
 
 Samples
 * Per Property Validation Attributes.
@@ -8,6 +8,7 @@ Samples
 * Deferring validation.
 * Validation without assignment.
 
+Screenshots
 ![Screenshot](Assets/ValidationAttributes.png?raw=true)
 ![Screenshot](Assets/ComparingProperties.png?raw=true)
 ![Screenshot](Assets/ComparingNewToOld.png?raw=true)
