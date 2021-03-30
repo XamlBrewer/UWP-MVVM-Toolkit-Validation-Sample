@@ -9,6 +9,7 @@ Samples
 * Validation without assignment.
 
 Screenshots
+
 ![Screenshot](Assets/ValidationAttributes.png?raw=true)
 ![Screenshot](Assets/ComparingProperties.png?raw=true)
 ![Screenshot](Assets/ComparingNewToOld.png?raw=true)
