@@ -7,3 +7,9 @@ Samples
 * Comparing new value to old.
 * Deferring validation.
 * Validation without assignment.
+
+![Screenshot](Assets/ValidationAttributes.png?raw=true)
+![Screenshot](Assets/ComparingProperties.png?raw=true)
+![Screenshot](Assets/ComparingNewToOld.png?raw=true)
+![Screenshot](Assets/DelayedValidation.png?raw=true)
+![Screenshot](Assets/TrySetProperty.png?raw=true)
