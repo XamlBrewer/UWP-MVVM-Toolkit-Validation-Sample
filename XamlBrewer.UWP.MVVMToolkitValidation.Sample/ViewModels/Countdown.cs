@@ -27,8 +27,9 @@ namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
         [CustomValidation(typeof(Countdown), nameof(ValidateValue))]
         public int Value
         {
-            get => _value; 
-            set {
+            get => _value;
+            set
+            {
                 _previousValue = _value;
                 SetProperty(ref _value, value, true);
             }
@@ -56,8 +57,8 @@ namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
 
         public static ValidationResult ValidateValue(int value, ValidationContext context)
         {
-            Countdown instance = (Countdown)context.ObjectInstance;
-            bool isValid = value < instance._previousValue;
+            var instance = (Countdown)context.ObjectInstance;
+            var isValid = value < instance._previousValue;
 
             if (isValid)
             {

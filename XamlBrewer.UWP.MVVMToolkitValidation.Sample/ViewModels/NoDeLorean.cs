@@ -13,7 +13,7 @@ namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
     {
         private DateTime? _startDate = null;
         private DateTime? _endDate = null;
-        
+
         public NoDeLorean()
         {
             ErrorsChanged += NoDelorean_ErrorsChanged;
@@ -29,7 +29,9 @@ namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
         public DateTime? StartDate
         {
             get => _startDate;
-            set { SetProperty(ref _startDate, value, true);
+            set
+            {
+                SetProperty(ref _startDate, value, true);
                 ValidateProperty(EndDate, nameof(EndDate));
             }
         }
@@ -46,11 +48,12 @@ namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
             StartDate = ConvertFromDateTimeOffset(dto.Value);
         }
 
-        [GreaterThan (nameof(StartDate), "End date should come after start date.")]
+        [GreaterThan(nameof(StartDate), "End date should come after start date.")]
         public DateTime? EndDate
         {
             get => _endDate;
-            set { 
+            set
+            {
                 SetProperty(ref _endDate, value, true);
             }
         }
