@@ -29,7 +29,7 @@ namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
 
                 _errors.AddRange(errors);
                 OnPropertyChanged(nameof(Errors));
-                OnPropertyChanged(nameof(HasErrors2));
+                OnPropertyChanged(nameof(ErrorsHaveI));
             }
         }
 
@@ -45,12 +45,13 @@ namespace XamlBrewer.UWP.MvvmToolkitValidation.Sample.ViewModels
 
                 _errors.AddRange(errors);
                 OnPropertyChanged(nameof(Errors));
-                OnPropertyChanged(nameof(HasErrors2));
+                OnPropertyChanged(nameof(ErrorsHaveI));
             }
         }
 
         public string Errors => string.Join(Environment.NewLine, from ValidationResult e in _errors select e.ErrorMessage);
 
-        public bool HasErrors2 => Errors.Length > 0;
+        // Since HasErrors is not virtual:
+        public bool ErrorsHaveI => Errors.Length > 0;
     }
 }

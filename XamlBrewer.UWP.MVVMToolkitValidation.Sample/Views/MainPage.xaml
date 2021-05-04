@@ -280,7 +280,7 @@
                         <!-- HasErrors is always false -->
                         <SymbolIcon Symbol="ReportHacked"
                                     Foreground="Red"
-                                    Visibility="{x:Bind ViewModel.NotYoda.HasErrors2, Mode=OneWay}"
+                                    Visibility="{x:Bind ViewModel.NotYoda.ErrorsHaveI, Mode=OneWay}"
                                     HorizontalAlignment="Right">
                             <ToolTipService.ToolTip>
                                 <TextBlock Text="{x:Bind ViewModel.NotYoda.Errors, Mode=OneWay}"
